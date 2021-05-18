@@ -178,12 +178,86 @@ QUESTIONS:
 /* Q10: Produce a list of facilities with a total revenue less than 1000.
 The output of facility name and total revenue, sorted by revenue. Remember
 that there's a different cost for guests and members! */
-
+	name	revenue
+0	Table Tennis	90.0
+1	Snooker Table	115.0
+2	Pool Table	265.0
+3	Badminton Court	604.5
 /* Q11: Produce a report of members and who recommended them in alphabetic surname,firstname order */
 
+name	recommendedby_name
+0	GUEST GUEST	None
+1	Darren Smith	None
+2	Tracy Smith	None
+3	Tim Rownam	None
+4	Janice Joplette	Darren Smith
+5	Gerald Butters	Darren Smith
+6	Burton Tracy	None
+7	Nancy Dare	Janice Joplette
+8	Tim Boothe	Tim Rownam
+9	Ponder Stibbons	Burton Tracy
+10	Charles Owen	Darren Smith
+11	David Jones	Janice Joplette
+12	Anne Baker	Ponder Stibbons
+13	Jemima Farrell	None
+14	Jack Smith	Darren Smith
+15	Florence Bader	Ponder Stibbons
+16	Timothy Baker	Jemima Farrell
+17	David Pinker	Jemima Farrell
+18	Matthew Genting	Gerald Butters
+19	Anna Mackenzie	Darren Smith
+20	Joan Coplin	Timothy Baker
+21	Ramnaresh Sarwin	Florence Bader
+22	Douglas Jones	David Jones
+23	Henrietta Rumney	Matthew Genting
+24	David Farrell	None
+25	Henry Worthington-Smyth	Tracy Smith
+26	Millicent Purview	Tracy Smith
+27	Hyacinth Tupperware	None
+28	John Hunt	Millicent Purview
+29	Erica Crumpet	Tracy Smith
+30	Darren Smith	None
 
 /* Q12: Find the facilities with their usage by member, but not guests */
 
+name	members
+0	Badminton Court	24
+1	Massage Room 1	24
+2	Massage Room 2	12
+3	Pool Table	27
+4	Snooker Table	22
+5	Squash Court	24
+6	Table Tennis	25
+7	Tennis Court 1	23
+8	Tennis Court 2	21
 
 /* Q13: Find the facilities usage by month, but not guests */
+	name	month	members
+0	Badminton Court	07	51
+1	Badminton Court	08	132
+2	Badminton Court	09	161
+3	Massage Room 1	07	77
+4	Massage Room 1	08	153
+5	Massage Room 1	09	191
+6	Massage Room 2	07	4
+7	Massage Room 2	08	9
+8	Massage Room 2	09	14
+9	Pool Table	07	103
+10	Pool Table	08	272
+11	Pool Table	09	408
+12	Snooker Table	07	68
+13	Snooker Table	08	154
+14	Snooker Table	09	199
+15	Squash Court	07	23
+16	Squash Court	08	85
+17	Squash Court	09	87
+18	Table Tennis	07	48
+19	Table Tennis	08	143
+20	Table Tennis	09	194
+21	Tennis Court 1	07	65
+22	Tennis Court 1	08	111
+23	Tennis Court 1	09	132
+24	Tennis Court 2	07	41
+25	Tennis Court 2	08	109
+26	Tennis Court 2	09	126
 
