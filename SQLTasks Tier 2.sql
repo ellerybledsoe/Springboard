@@ -122,10 +122,52 @@ different costs to members (the listed costs are per half-hour 'slot'), and
 the guest user's ID is always 0. Include in your output the name of the
 facility, the name of the member formatted as a single column, and the cost.
 Order by descending cost, and do not use any subqueries. */
->
-
+select
+c.name as facility,
+concat(b.firstname," ",b.surname) as name,
+case when a.memid = 0 then c.guestcost
+	else c.membercost end as cost
+from Bookings a
+left join Members b
+	on a.memid = b.memid
+left join Facilities c
+	on a.facid = c.facid
+where 
+	left(starttime,10) = '2012-09-14'
+group by
+	c.name,
+	cost
+order by 
+	cost desc
+;
 /* Q9: This time, produce the same result as in Q8, but using a subquery. */
-
+select
+a.name as facility,
+concat(a.firstname," ",a.surname) as name,
+case when a.memid = 0 then a.guestcost
+	else a.membercost end as cost
+from
+	(select 
+     c.name, 
+     a.memid,
+     b.firstname,
+     b.surname,
+     c.guestcost,
+     c.membercost
+	from Bookings a
+	left join Members b
+		on a.memid = b.memid
+	left join Facilities c
+		on a.facid = c.facid
+	where 
+		left(starttime,10) = '2012-09-14'
+     ) a
+group by
+	a.name,
+	cost
+order by 
+	cost desc
+;
 
 /* PART 2: SQLite
 
